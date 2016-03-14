@@ -3,7 +3,7 @@ import threading
 
 class AsyncWrite(threading.Thread):
     def __init__(self, text, out):
-        threading.Thread.__init__(self)
+        super().__init__()
         self.text = text
         self.out = out
 
@@ -18,7 +18,7 @@ def main():
     msg = input('> ')
     bckg = AsyncWrite(msg, 'out.txt')
     bckg.start()
-    print('The program can continue whil it writes in another thread')
+    print('The program can continue while it writes in another thread')
     print('100 + 400 =', 100 + 400)
     bckg.join()
     print('Waited until thread was complete')
