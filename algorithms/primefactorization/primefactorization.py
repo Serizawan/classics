@@ -1,3 +1,9 @@
+#!/usr/bin/env python3
+
+from functools import reduce
+from operator import mul
+
+
 def primefactorization(n):
     d = 2
     res = []
@@ -10,3 +16,8 @@ def primefactorization(n):
     if n > 1:
         res.append(n)
     return res
+
+
+result = [2, 3, 5, 5, 7, 11]
+n = reduce(mul, result)
+assert(primefactorization(n) == result)
