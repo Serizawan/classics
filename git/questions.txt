@@ -1,0 +1,4 @@
+- What is git?
+- Explain the main git commands (add, commit, push, merge, checkout, pull...)
+- Explain the feature-branch workflow
+- Explain the fork workflow
