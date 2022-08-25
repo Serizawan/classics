@@ -1,1 +1,4 @@
+- What is the value of Docker?
 - What is the difference between a Docker image and a Docker container?
+- What is the purpose of docker-compose?
+- What is the purpose of Docker volumes?
