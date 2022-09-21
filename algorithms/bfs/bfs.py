@@ -1,14 +1,14 @@
 def bfs(graph, start_node):
-    bfs_ordering = []
-    visited = set(start_node)
     queue = [start_node]
+    visited = set(start_node)
+    bfs_ordering = [start_node]
     while queue:
         node = queue.pop(0)
-        bfs_ordering.append(node)
         for n in graph[node]:
             if n not in visited:
                 queue.append(n)
                 visited.add(n)
+                bfs_ordering.append(n)
     return bfs_ordering
 
 
