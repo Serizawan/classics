@@ -7,6 +7,7 @@ def gcd(a, b):
     return gcd(b, a % b)
 
 
-a = 3 * 3 * 5 * 5 * 13
-b = 2 * 3 * 5 * 7 * 11
-assert(math.gcd(a, b) == gcd(a, b))
+if __name__ == "__main__":
+    a = 3 * 3 * 5 * 5 * 13
+    b = 2 * 3 * 5 * 7 * 11
+    assert(math.gcd(a, b) == gcd(a, b) == 3 * 5)

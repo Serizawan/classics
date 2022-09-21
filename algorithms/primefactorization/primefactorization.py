@@ -1,10 +1,8 @@
-#!/usr/bin/env python3
-
 from functools import reduce
 from operator import mul
 
 
-def primefactorization(n):
+def prime_factorize(n):
     d = 2
     res = []
     while d * d <= n:
@@ -18,6 +16,7 @@ def primefactorization(n):
     return res
 
 
-result = [2, 3, 5, 5, 7, 11]
-n = reduce(mul, result)
-assert(primefactorization(n) == result)
+if __name__ == "__main__":
+    result = [2, 3, 5, 5, 7, 11]
+    n = reduce(mul, result)
+    assert(prime_factorize(n) == result)
