@@ -26,10 +26,8 @@ def compute_dijkstra_shortest_paths_naive(graph, start_node):
 def compute_dijkstra_shortest_paths(graph, start_node):
     visited = defaultdict(lambda: math.inf)
     unvisited = defaultdict(lambda: math.inf)
-    current_distance = 0
-    unvisited[start_node] = current_distance
-    heap = []
-    heapq.heappush(heap, (current_distance, start_node))
+    unvisited[start_node] = 0
+    heap = [(0, start_node)]
     while heap:
         current_distance, node = heapq.heappop(heap)
         if node not in visited:
