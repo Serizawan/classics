@@ -32,12 +32,12 @@ def compute_dijkstra_shortest_paths(graph, start_node):
     heapq.heappush(heap, (current_distance, start_node))
     while heap:
         current_distance, node = heapq.heappop(heap)
-        for neighbour, distance in graph[node]:
-            node_distance = current_distance + distance
-            if neighbour not in visited and node_distance < unvisited[neighbour]:
-                unvisited[neighbour] = node_distance
-                heapq.heappush(heap, (node_distance, neighbour))
-        if current_distance < visited[node]:
+        if node not in visited:
+            for neighbour, distance in graph[node]:
+                node_distance = current_distance + distance
+                if neighbour not in visited and node_distance < unvisited[neighbour]:
+                    unvisited[neighbour] = node_distance
+                    heapq.heappush(heap, (node_distance, neighbour))
             visited[node] = current_distance
         unvisited.pop(node, None)
     return visited
