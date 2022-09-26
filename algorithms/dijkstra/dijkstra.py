@@ -39,7 +39,7 @@ def compute_dijkstra_shortest_paths(graph, start_node):
                     unvisited[neighbour] = node_distance
                     heapq.heappush(heap, (node_distance, neighbour))
             visited[node] = current_distance
-        unvisited.pop(node, None)
+            unvisited.pop(node)
     return visited
 
 
